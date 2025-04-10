@@ -20,6 +20,8 @@ body {
 body {
 
   background-image: url('../src/assets/images/backgroundWallpapers/AbyssalSire.jpg');
+  /* background-image: url('/src/assets/images/backgroundWallpapers/AbyssalSire.jpg');
+  background-image: url('/osrs-price-catcher/assets/images/backgroundWallpapers/AbyssalSire.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

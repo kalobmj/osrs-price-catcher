@@ -4,6 +4,8 @@ import itemData from '../../utils/itemData';
 import { useRef } from 'react';
 import coins from '../../../src/assets/images/underlayImages/Coins_detail.png'
 
+// test
+
 export default function MainContainer({ underlayStyles }) {
     // state to store item information. triggers page re-render on each change
     const [data, setData] = useState({

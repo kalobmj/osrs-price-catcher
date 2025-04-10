@@ -1,0 +1,40 @@
+const [data, setData] = useState(null)
+
+useEffect(() => {
+  const storedData = localStorage.getItem('data');
+  if (storedData) {
+    setData(JSON.parse(storedData));
+  } else {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        localStorage.setItem('data', JSON.stringify(data));
+      });
+  }
+}, []);
+
+
+https://oldschool.runescape.wiki/?title=Module:GEPrices/data.json&action=raw&ctype=application%2Fjson
+
+// all items with prices and thats
+    // const itemPrices = 'https://oldschool.runescape.wiki/?title=Module:GEPrices/data.json&action=raw&ctype=application%2Fjson';
+
+    // useEffect(() => {
+    //     const storedData = localStorage.getItem('data');
+    //     if (storedData) {
+    //         const parsedData = JSON.parse(storedData)
+    //         setData(JSON.parse(storedData))
+    //         console.log('loaded data from localStorage:', parsedData)
+    //     } else {
+    //         console.log('Calling API...')
+    //         fetch(itemPrices)
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 setData(prevData => data);
+    //                 localStorage.setItem('data', JSON.stringify(data))
+    //                 console.log('our data:', data)
+    //             })
+    //             .catch(err => console.error('Error fetching data:', err));
+    //     }
+    // }, []);

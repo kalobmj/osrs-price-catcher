@@ -1,0 +1,127 @@
+    // failed attempt at fetching reddit data 500 error
+    // const [redditData, setRedditData] = useState(null);
+
+    // const testApi2 = 'https://oldschool.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=itemId'
+
+    // useEffect(() => {
+    //     const storedData = localStorage.getItem('redditData');
+    //     if (storedData) {
+    //         const parsedData = JSON.parse(storedData);
+    //         setData(parsedData)
+    //         console.log('Loaded data from localStorage', parsedData)
+    //     } else {
+    //         console.log('Calling the API...')
+    //         fetch(testApi2)
+    //             .then(redditData => redditData.json())
+    //             .then(redditData => {
+    //                 setData(prev => ({ ...prev, redditData }))
+    //                 localStorage.setItem('redditData', JSON.stringify(redditData))
+    //                 console.log('Our reddit data', redditData)
+    //             })
+    //             .catch(err => console.error('This is the error:', err))
+    //     }
+    // }, []);
+
+        // this is the api call and useEffect from the reddit 
+    // const apiTest = 'http://services.runescape.com/m=itemdb_oldschool';
+
+    // useEffect(() => {
+
+    //     fetch(apiTest)
+
+    //         .then(test => test.json())
+    //         .then(test => {
+
+    //             console.log('api test results', test)
+
+    //         })
+
+    //         .catch(err => console.error('this is an error', err))
+
+
+    // }, [])
+
+
+        // proxy server attempt 500 error
+    // const [testData, setTestData] = useState(null);
+    // const [testError, setTestError] = useState(null);
+
+    // useEffect(() => {
+    //     // Fetch data from the proxy server
+    //     fetch('/proxy')
+    //         .then((response) => {
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             return response.text();
+    //         })
+    //         .then((data) => {
+    //             setTestData(data);
+    //         })
+    //         .catch((error) => {
+    //             setTestError(error);
+    //             console.log('Error fetching data', error);
+    //         });
+    // }, []);
+
+        // example async func
+    // async function fetchData(url) {
+
+    //     try {
+    //         const response = await fetch(url);
+    //         const data = await response.json();
+
+    //         console.log(data);
+
+    //         return data;
+    //     } catch (error) {
+    //         console.error('error fetching data:', error);
+    //     }
+    // };
+
+
+        // all items with prices and stats
+    // const itemPrices = 'https://oldschool.runescape.wiki/?title=Module:GEPrices/data.json&action=raw&ctype=application%2Fjson';
+
+    // useEffect(() => {
+    //     const storedData = localStorage.getItem('data');
+    //     if (storedData) {
+    //         const parsedData = JSON.parse(storedData)
+    //         setData(JSON.parse(storedData))
+    //         console.log('loaded data from localStorage:', parsedData)
+    //     } else {
+    //         console.log('Calling API...')
+    //         fetch(itemPrices)
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 setData(prevData => data);
+    //                 localStorage.setItem('data', JSON.stringify(data))
+    //                 console.log('our data:', data)
+    //             })
+    //             .catch(err => console.error('Error fetching data:', err));
+    //     }
+    // }, []);
+
+
+    // console.log(fetchData('https://prices.runescape.wiki/api/v1/osrs/mapping'))
+
+    // console.log(fetchData('https://secure.runescape.com/m=itemdb_oldschool/obj_big.gif?id=4151'))
+
+    // console.log(fetchData())
+
+    // console.log(fetchData('https://prices.runescape.wiki/api/v1/osrs/mapping')); // item data inc id, name, members, wiki icon filename
+
+    // // console.log(fetchData('https://prices.runescape.wiki/api/v1/osrs/latest')); // ge price data by id
+
+    // const imageUrl = `http://localhost:3000/proxy?url=${encodeURIComponent('https://secure.runescape.com/m=itemdb_oldschool/obj_big.gif?id=676')}`;
+
+    // console.log(imageUrl)
+
+    // console.log(fetchData('https://secure.runescape.com/m=itemdb_oldschool/obj_big.gif?id=21279')); // 676 ~ 21279
+    // //
+
+    // console.log(fetchData('https://prices.runescape.wiki/api/v1/osrs/latest'));
+
+    // console.log(fetchData('https://prices.runescape.wiki/api/v1/osrs/latest'));
+
+    // console.log(fetchData('https://prices.runescape.wiki/api/v1/osrs/latest'));

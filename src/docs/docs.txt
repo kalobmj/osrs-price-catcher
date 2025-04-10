@@ -1,0 +1,118 @@
+title & logo, hr underneath
+
+    main container
+        price & pic area (top half)
+        search and item name (bottom half)
+
+    colors at bottom (change on click)
+
+// 
+
+item id
+need 2 get image url based on item id
+
+fix gaps between items in main container
+
+1/16 
+    need to fix footer right
+        need to make buttons on footer clear and just show text, but have them for accessibility
+
+    need to work on apis to fetch placeholders for searchbox.
+        possibly fetch data, retrieve 10 random items and display them when bar is clicked. when item is clicked from bar or typed. icon image will be fetched. and name / description. along with its ge price in the top left.
+
+1/20
+    use the website article listed : https://www.reddit.com/r/OSRSflipping/comments/1bvvp65/data_analytics_and_ge_reporting_strategies_using/
+    this is for help with apis
+
+1/28
+    consider uploading to github or keeping file on docs for laptop.
+    work on rest of api
+        start working on funtionality
+        read helper.txt
+    parse osrs python
+
+2/8
+    got bottom pics working just need to do css styling for it, also css styling throughout the entire page
+        need to work on working with api and making search function
+
+2/9
+    change color of price based on how much it is
+        red
+        white
+        blue
+        use runelite spotlight colors
+    work on three color scheme themes
+    have different colors use a different main container color scheme with repeating icon icons slanted in the underlay, ie whips
+        1. whips red brown linear gradient // diff patterns? slanted? swirls? 
+        2. dds red green linear gradient
+        3. santa hats white red linear gradient
+        ags too, with same yellow blue gradient for arma colors
+    consider having a different background with each color option
+        have these different background and body backgrounds stored in state that styles inline style={{}}
+
+2/10
+    got underlay background changing, just need to work on the linear gradients. and pass them into each colorway button 1-3
+
+2/11
+    need to fix folders
+    all of my big components need to be destructured into smaller ones
+    
+2/15
+    finally got the object modules to import and get random images 
+    need to continue breaking down files into smaller components
+    work on overall functionality.
+    work on apis will come after styling and button functions are fleshed out. then project will mostly be done
+    possibly can
+        must work on grabbing data via express.js backend server and possibly saving it on that server or localstorage
+    change border colors on colorway change, cause it will match the colors better
+    for wallpapers, just pick top 10 pictures that are highquality and fit the theme.
+        can have specific color ways have a custom background
+            play through picstures and find the right ones
+                make a new component to import and play with the wallpapers
+    fix bottom images to get random image thats not the last
+
+2/16
+    once buttons are done and functional
+        work on fixing randomImage at bottom to not repeat the last image.
+            possibly spice up the header a little
+    then we will start work on backend and api
+2/18 
+    we got styling object and state updating but for some reason its not passing down to our maincontainer component 
+    fix protection prayers on first color button
+        work on dynamic borders for the color buttons
+    fix the random bottom image so no repeat
+    might have to sort the modules..
+    drop the moving borders, work on bottomimage fixer
+
+2/19 
+    need to come up with a util function that will sort our module imports, because they are not constant between my laptop and desktop.
+    fix randomImage puller util so it will not return the last image.
+        bottom image doesn't auto change on renders because it is maintained in state.
+            gameLogos does not do with. we need to keep its value in state
+    styling and image fetch are mostly done.
+        just need to work on sorting module imports, and working with api then project will mostly be done
+    possibly work on rotating border, but for main container
+    [Violation] 'readystatechange' handler took 338ms
+        our page is using only synchronous functions. we can try to implement async functions that way our calls don't have to wait on each other. this will speed up our load times
+    
+3/17
+    need to set up api calls. have all the urls and some code to draw from on our other repo.
+        probably need to have a search function for new users who don't know item names.
+            also possibly a default list of high valued items.
+
+3/18
+    got item api calls, just need to flesh them out, store the data in our state and apply the values to our main container
+
+4/7 
+    got most of api done, just need to update our object state with the values, account for misspelling, also creat dropdown when user searches. Might get hardcoded item list off wiki and create it using that, not sure yet.
+        need to finish rounding out ui design, update fonts possibly, make more readable
+            possibly use different colors for item prices, depending on how large or small the price is.
+                could have gp after price, but maybe in a smaller text
+    main things need done:
+        a drop down of 5-10 items that match while user is typing;
+        need to have default values for when page loads, and when user enters an invalid item.
+        change font of text and clean up ui
+            after all of this we are basically done, can come back and refactor code in the future
+
+4/9
+    we are basically done 99%, just need to fix the drop box disappearing when not focused. also clean up maincontainer

@@ -1,0 +1,95 @@
+To build an OSRS price grabber with a search bar that provides a dropdown of all in-game items, and displays the item's image and current Grand Exchange (GE) price upon selection, you'll need to utilize specific APIs. Here's how you can achieve this:
+
+1. Fetching Item Data
+**a. Item List with IDs and Names:
+
+Purpose: To populate the search bar's dropdown with all item names and their corresponding IDs.
+API Endpoint:
+URL: https://prices.runescape.wiki/api/v1/osrs/mapping
+Description: This endpoint provides a comprehensive list of OSRS items, including their IDs, names, and other metadata.
+**b. Current Item Prices:
+
+Purpose: To retrieve the latest GE prices for items.
+API Endpoint:
+URL: https://prices.runescape.wiki/api/v1/osrs/latest
+Description: This endpoint returns the most recent prices for items, indexed by their item IDs.
+**c. Item Images:
+
+Purpose: To display the item's image alongside its price.
+Image URL Pattern:
+URL Format: https://secure.runescape.com/m=itemdb_oldschool/obj_big.gif?id=ITEM_ID
+Description: Replace ITEM_ID with the actual item ID to get the item's image.
+2. Implementing the Search Functionality
+**a. Populate the Search Dropdown:
+
+Fetch the Item List:
+Use the /mapping endpoint to retrieve all item names and IDs.
+Display in Dropdown:
+Populate the search bar's dropdown with the item names.
+Allow users to type and filter items dynamically.
+**b. Handle User Selection:
+
+On Item Selection or Search:
+Capture the selected item's name or the user's input.
+Find the Corresponding Item ID:
+Match the item name to its ID using the data from the /mapping endpoint.
+3. Displaying Item Details
+**a. Fetch and Display Item Price:
+
+Retrieve Price:
+Use the /latest endpoint to get the current price for the item ID.
+Display Price:
+Show the item's current GE price on the page.
+**b. Fetch and Display Item Image:
+
+Construct Image URL:
+Replace ITEM_ID in the image URL pattern with the actual item ID.
+Display Image:
+Show the item's image alongside its price.
+
+The links I provided are from the Old School RuneScape (OSRS) Price API, which is an open, community-supported API maintained by the team at prices.runescape.wiki. This website is dedicated to tracking and providing real-time data for OSRS Grand Exchange prices.
+
+// 
+
+Here's how I found them and why they are relevant:
+
+1. OSRS Wiki API Documentation
+The prices.runescape.wiki API is well-documented and is widely used by developers for OSRS-related projects. You can access their documentation at:
+
+Documentation URL:
+https://prices.runescape.wiki/
+
+This documentation explains the available endpoints, how to use them, and what data they return. It’s the primary source for fetching item mappings, current prices, and historical trends.
+
+2. API Endpoints Breakdown
+The endpoints I shared are the main ones for fetching data:
+
+Mapping Endpoint (Item List):
+
+URL: https://prices.runescape.wiki/api/v1/osrs/mapping
+This endpoint provides a list of all items, their IDs, names, and metadata.
+Useful for populating dropdowns, search bars, or item selection features.
+Latest Prices Endpoint:
+
+URL: https://prices.runescape.wiki/api/v1/osrs/latest
+Provides up-to-date Grand Exchange prices for items, indexed by their IDs.
+Useful for displaying current market prices.
+Item Images (Official OSRS Site):
+
+Image URL Pattern:
+https://secure.runescape.com/m=itemdb_oldschool/obj_big.gif?id=ITEM_ID
+These images are hosted on the official Old School RuneScape Grand Exchange site. By replacing ITEM_ID with a valid item ID, you can fetch the item's image.
+How I Found Them
+Exploring OSRS Resources:
+
+The OSRS Wiki is a central hub for RuneScape-related information, and they host the price API as part of their resources for the community.
+Developer Communities:
+
+Many developers working on RuneScape-related tools (e.g., price checkers, calculators, or plugins) use this API and recommend it in forums like Reddit or GitHub repositories.
+Direct Documentation Access:
+
+The API's documentation explicitly lists these endpoints, making them reliable and official.
+Why Use This API?
+It is accurate and up-to-date, relying on real-time data from the OSRS Grand Exchange.
+It is free and open for the community, with clear usage guidelines.
+It provides both comprehensive item metadata (from /mapping) and current prices (from /latest), making it ideal for projects like price checkers.

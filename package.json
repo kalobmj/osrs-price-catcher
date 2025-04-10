@@ -1,6 +1,6 @@
 {
   "name": "osrs-price-catcher2",
-  "homepage": "https://kalobmj.github.io/osrspricecatcher/",
+  "homepage": "https://kalobmj.github.io/osrs-price-catcher/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -38,12 +36,12 @@
   "main": "eslint.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kalobmj/osrspricecatcher.git"
+    "url": "git+https://github.com/kalobmj/osrs-price-catcher.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kalobmj/osrspricecatcher/issues"
+    "url": "https://github.com/kalobmj/osrs-price-catcher/issues"
   }
 }

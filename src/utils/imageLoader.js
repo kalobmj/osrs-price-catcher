@@ -36,6 +36,7 @@ export function getSpecificImage(globCall, match) {
         let urlLastIndex = imageUrl.lastIndexOf('/');
         let urlFinal = '';
 
+        // for loop to find name of asset regardless of dev or delpoy
         for (let i=urlLastIndex+1; i<imageUrl.length; i++) {
             if (imageUrl[i] === '.' || imageUrl[i] === '-') {
                 break

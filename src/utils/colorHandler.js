@@ -1,7 +1,7 @@
 import * as localModuleImports from './moduleImports.js'
 import { getSpecificImage } from './imageLoader.js';
 
-console.log(localModuleImports)
+// console.log(localModuleImports)
 
 
 // button style props based on matching image urls
@@ -10,19 +10,19 @@ const buttonProps = [
         id: 0,
         underlayingImage: `test`,
         linearGradient: 'linear-gradient(rgba(221, 19, 19, 0.5), rgba(245, 220, 164, 0.5))',
-        backgroundWallpaper: `${getSpecificImage(localModuleImports.backgroundImages, '/src/assets/images/backgroundWallpapers/Tztok-Jad.png').url}`
+        backgroundWallpaper: `${getSpecificImage(localModuleImports.backgroundImages, 'Tztok-Jad').url}`
     },
     {
         id: 1,
-        underlayingImage: `url(${getSpecificImage(localModuleImports.changedUnderlayImages, '/src/assets/images/colorUnderlayImages/ElysianSpiritShield.webp').url})`,
+        underlayingImage: `url(${getSpecificImage(localModuleImports.changedUnderlayImages, 'ElysianSpiritShield.webp').url})`,
         linearGradient: 'linear-gradient(rgba(2, 38, 117, 0.5), rgba(156, 145, 145, 0.5))',
-        backgroundWallpaper: `${getSpecificImage(localModuleImports.backgroundImages, '/src/assets/images/backgroundWallpapers/Ariane.png').url}`
+        backgroundWallpaper: `${getSpecificImage(localModuleImports.backgroundImages, 'Ariane').url}`
     },
     {
         id: 2,
-        underlayingImage: `url(${getSpecificImage(localModuleImports.changedUnderlayImages, '/src/assets/images/colorUnderlayImages/TwistedBow.png').url})`,
+        underlayingImage: `url(${getSpecificImage(localModuleImports.changedUnderlayImages, 'TwistedBow.png').url})`,
         linearGradient: 'linear-gradient(rgba(145, 163, 18, 0.5), rgba(50, 46, 46, 0.5))',
-        backgroundWallpaper: `${getSpecificImage(localModuleImports.backgroundImages, '/src/assets/images/backgroundWallpapers/JungleDiscovery.jpg').url}`
+        backgroundWallpaper: `${getSpecificImage(localModuleImports.backgroundImages, 'JungleDiscovery').url}`
     }
 ];
 

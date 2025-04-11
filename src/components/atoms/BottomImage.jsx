@@ -9,6 +9,7 @@ const BottomImage = () => {
 
     // function for handling url state change
     const handleImageChange = () => {
+        console.log('handleImageChange: ', localImageModules.bottomImages[0])
         setBottomImage(getRandomImage(localImageModules.bottomImages, bottomImage.id))
     };
 

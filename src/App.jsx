@@ -9,6 +9,9 @@ import * as localModuleImports from './utils/moduleImports'
 
 function App() {
 
+  console.log('icons', localModuleImports.protectionPrayerIcons)
+  console.log('modules', localModuleImports.protectionPrayersIconsModules)
+
   console.log(localModuleImports.protectionPrayerIcons[0].url)
 
   // "/src/assets/images/colorUnderlayImages/protectionIcons/ProtectFromMagicIcon.webp"
@@ -49,7 +52,13 @@ function App() {
 
   // useEffect to change backgroundWallpaper on first render
   useEffect(() => {
-    const landingWallpaper = '../' + `${getRandomImage(localModuleImports.backgroundImages).url.slice(1)}`
+    // const landingWallpaper = '../' + `${getRandomImage(localModuleImports.backgroundImages).url.slice(1)}`
+    const landingWallpaper = `${getRandomImage(localModuleImports.backgroundImages).url}`
+
+    console.log(localModuleImports.backgroundImages[0].url)
+    console.log(localModuleImports.backgroundImages[0].url.slice(1))
+
+    console.log({landingWallpaper})
 
     document.body.style.backgroundImage = `url('${landingWallpaper}')`
   }, []);

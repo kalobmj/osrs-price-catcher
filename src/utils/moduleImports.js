@@ -4,7 +4,7 @@ export const protectionPrayersIconsModules = import.meta.glob('/src/assets/image
 // mapping over prayer icon modules
 export const protectionPrayerIcons = Object.entries(protectionPrayersIconsModules).map((module, index) => ({
     id: index,
-    url: module[0]
+    url: module[1].default
 }));
 
 // import rest of changing underlay image modules
@@ -13,7 +13,7 @@ export const changedUnderlayImageModules = import.meta.glob('/src/assets/images/
 // mapping over rest of changing underlay images
 export const changedUnderlayImages = Object.entries(changedUnderlayImageModules).map((module, index) => ({
     id: index,
-    url: module[0]
+    url: module[1].default
 }));
 
 // importing backroundWallpaper modules
@@ -22,7 +22,7 @@ export const backgroundImageModules = import.meta.glob('/src/assets/images/backg
 // mapping over backgroundImage modules
 export const backgroundImages = Object.entries(backgroundImageModules).map((module, index) => ({
     id: index,
-    url: module[0]
+    url: module[1].default
 }));
 
 // import all underlay modules
@@ -31,7 +31,7 @@ export const underlayModules = import.meta.glob('/src/assets/images/underlayImag
 // map over our underlayImages module
 export const underlayImages = Object.entries(underlayModules).map((module, index) => ({
   id: index,
-  url: module[0]
+  url: module[1].default
 }));
 
 // importing all gameLogo image modules
@@ -40,7 +40,7 @@ export const gameLogoModules = import.meta.glob('/src/assets/images/gameLogos/**
 // gameLogo objects
 export const gameLogos = Object.entries(gameLogoModules).map((module, index) => ({
     id: index,
-    url: module[0]
+    url: module[1].default
 }));
 
 // importing bottomImage modules
@@ -49,7 +49,7 @@ export const bottomImageModules = import.meta.glob('/src/assets/images/bottomIma
 // bottomImages objects 
 export const bottomImages = Object.entries(bottomImageModules).map((module, index) => ({
     id: index,
-    url: module[0]
+    url: module[1].default
 }));
 
 console.log(protectionPrayerIcons);

@@ -34,12 +34,20 @@ export function getSpecificImage(globCall, match) {
     const foundImage = globCall.find(image => {
         let imageUrl = image.url
         let urlLastIndex = imageUrl.lastIndexOf('/');
+        let urlFinal = '';
 
-        console.log(imageUrl)
-        console.log(urlLastIndex)
-        console.log(image.url.slice(urlLastIndex+1))
+        for (let i=urlLastIndex+1; i<imageUrl.length; i++) {
+            if (imageUrl[i] === '.' || imageUrl[i] === '-') {
+                break
+            } else {
+                urlFinal += imageUrl[i]
+            }
+        }
+        console.log({imageUrl})
+        console.log({urlLastIndex})
+        console.log('urlFinal', urlFinal)
 
-        return image.url.slice(urlLastIndex+1) === match
+        return urlFinal === match
     });
 
     return foundImage;
